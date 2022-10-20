@@ -26,9 +26,23 @@ const Shop = () => {
         setCart(savedCart);
     },[products])
 
-    const handleAddToCart = (product) => {
-        setCart([...cart, product]);
-        addTodb(product.id)
+    const handleAddToCart = (selectedProduct) => {
+        // console.log('selected product >> ', selectedProduct)
+        const exist = cart.find(product => product.id === selectedProduct.id);
+        let newCart = [];
+        if(!exist){
+            //new to cart
+            selectedProduct.quantity = 1;
+            newCart = [...cart, selectedProduct];
+        }
+        else{
+            //cart e age theke exist kore
+            const rest = cart.filter(product => product.id !== selectedProduct.id);
+            exist.quantity = exist.quantity + 1;
+            newCart = [...rest, exist]
+        }
+        setCart(newCart);
+        addTodb(selectedProduct.id)
     }
 
     const removeBtn = (product) => {

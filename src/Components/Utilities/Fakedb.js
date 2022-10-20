@@ -22,6 +22,7 @@ const getStoredCart = () => {
     const storedCart = localStorage.getItem('shopping-cart');
     if(storedCart){
         shoppingCart = JSON.parse(storedCart);
+        // console.log('local storage >> ', storedCart)
     }
     return shoppingCart;
 }
