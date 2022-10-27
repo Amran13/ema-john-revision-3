@@ -14,3 +14,14 @@ button a{
     color: white;
     font-weight: 600;
 }
+
+@media screen and (max-width : 480px) {
+    .home-container{
+        flex-direction: column-reverse;
+        margin: 30px 30px;
+    }
+    img{
+        width: 100%;
+    }
+    
+}

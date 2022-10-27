@@ -10,3 +10,21 @@
     padding: 30px;
 }
 
+@media screen and (max-width : 480px) {
+    .products-container{
+        display: grid;
+        grid-template-columns: 1fr ;
+        padding: 10px;
+    }  
+    .shop-container{
+        /* display: grid;
+        grid-template-columns: 1fr; */
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .cart-container{
+        position: sticky;
+        top: 0;
+        background-color: aquamarine;
+    } 
+}

@@ -2,3 +2,15 @@
     position: sticky;
     top: 0;
 }
+
+
+@media screen and (max-width : 480px) {
+    .cart h2{
+        display: none;
+    }
+    .cart {
+        line-height: 20%;
+        font-weight: 600;
+    }
+    
+}
